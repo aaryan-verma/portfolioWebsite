@@ -8,6 +8,7 @@ import drumkit from '../assests/drumkit.png'
 import dicegame from '../assests/dicegame.png'
 import simongame from '../assests/simongame.png'
 import audiobookconvertor from '../assests/audiobookconvertor.png'
+import weather from '../assests/weather.png'
 
 export const projectList = [
     {
@@ -36,6 +37,12 @@ export const projectList = [
         link : 'https://todo-aaryan.herokuapp.com/',
     },
     {
+        name: 'Weather',
+        image: weather,
+        skills: 'HTML, CSS, JavaScript, React, Axios',
+        link : 'https://aaryan-verma.github.io/weather/',
+    },
+    {
         name: 'Drum Kit',
         image: drumkit,
         skills: 'HTML, CSS, JavaScript',
@@ -59,4 +66,5 @@ export const projectList = [
         skills: 'Python, PyPDF2, pyttsx3',
         link : 'https://github.com/aaryan-verma/audioBookConvertor',
     },
+    
 ]

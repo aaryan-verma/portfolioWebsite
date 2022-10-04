@@ -13,7 +13,7 @@ function Home() {
             
             <div className='prompt'>
                 <p>A Software Developer with a passion for learning and creating.</p>
-                <h3><a href='https://drive.google.com/file/d/15ph5FqJkf6GldwrGMzv1zWrGu_Rk4C6V/view'>Download Resume</a></h3>
+                <h3><a href='https://drive.google.com/file/d/1cw7lJ6DkNUF1EED3hZywm4YXuvuFa4SZ/view?usp=sharing'>Download Resume</a></h3>
                 <a href='https://www.linkedin.com/in/aaryan-verma/'><LinkedInIcon/></a>
                 <a href="mailto:aryanverma.av2000@gmail.com"><EmailIcon/></a>
                 < a href = 'https://github.com/aaryan-verma/'><GitHubIcon/></a>

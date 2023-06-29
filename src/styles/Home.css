@@ -5,9 +5,47 @@
     color: #3e497a;
   }
   
+  .me {
+    width: 20rem;
+    min-height: 17rem;
+    margin: auto;
+    /* margin-top: 2rem; */
+    clip-path: circle();
+    background-color: #192543;
+    margin-bottom: -5rem;
+  }
+
+  .resume-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.3rem 1.2rem;
+    background-color: #3e497a;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .resume-button:hover {
+    background-color: #21325e;
+  }
+  
+  .resume-icon {
+    font-size: 1.2rem;
+  }
+  
+  .resume-text {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  
   .about {
     width: 100%;
-    height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,47 +72,142 @@
     color: white;
   }
   
-  .skills {
-    font-size: 35px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
   
-  .skills h1 {
-    color: #3e497a;
+.skills {
+  font-size: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem; /* Add margin to push the skills section further down */
+}
+
+.skills h1 {
+  color: #3e497a;
+  margin-top: 0; /* Remove the default margin */
+}
+
+.skills .list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
+  gap: 2rem; /* Add gap between grid items */
+}
+
+.list .item {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid #3e497a; /* Add border */
+  transition: transform 0.3s ease; /* Add transition effect */
+  cursor: pointer; /* Add cursor pointer */
+}
+
+.list .item:hover {
+  transform: scale(1.05); /* Apply scaling effect on hover */
+}
+
+.list .item h1 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.list .item span {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .about h2 {
+    font-size: 40px;
   }
-  
-  .skills .list {
-    list-style: none;
-    width: 60%;
-  }
-  
-  .list span {
+
+  .about .prompt {
+    margin-top: 10px;
     font-size: 20px;
+    width: 80%;
   }
-  
-  @media only screen and (max-width: 600px) {
-    .about h2 {
-      font-size: 40px;
-    }
-  
-    .about .prompt {
-      margin-top: 10px;
-      font-size: 20px;
-      width: 80%;
-    }
-  
-    .skills {
-      text-align: center;
-    }
-    .list {
-      padding: 0;
-    }
-  
-    .skills h2 {
-      font-size: 30px;
-    }
+
+  .skills {
+    text-align: center;
   }
+
+  .list {
+    padding: 0;
+  }
+
+  .skills h2 {
+    font-size: 30px;
+  }
+}
+
+.skills {
+  font-size: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.skills h1 {
+  color: #3e497a;
+  margin-top: 0;
+}
+
+.skills .list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.list .item {
+  position: relative;
+  background-color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid #3e497a; /* Add border */
+  transition: transform 0.3s ease; /* Add transition effect */
+  cursor: pointer; /* Add cursor pointer */
+}
+
+.list .item:hover {
+  transform: scale(1.05); /* Apply scaling effect on hover */
+}
+
+.list .item h1 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.list .item span {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .about h2 {
+    font-size: 40px;
+  }
+
+  .about .prompt {
+    margin-top: 10px;
+    font-size: 20px;
+    width: 80%;
+  }
+
+  .skills {
+    text-align: center;
+  }
+
+  .skills h1 {
+    font-size: 30px;
+  }
+
+  .skills .list {
+    grid-template-columns: 1fr;
+  }
+}

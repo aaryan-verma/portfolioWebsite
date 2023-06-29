@@ -12,59 +12,59 @@ import weather from '../assests/weather.png'
 
 export const projectList = [
     {
-        name: 'Event Ticket Marketplace',
+        name: 'Decentralized Multichain ECommerce',
         image: eventticketmarketplace,
-        skills: 'MongoDB, Express, React, Node, Solidity, Blockchain.',
-        link : 'https://event-ticket-marketplace.vercel.app/discover',
+        skills: 'Express, React, Node, Solidty, Blockchain, Hardhat',
+        link : <a href="https://nft-gravity-seven.vercel.app/">https://nft-gravity-seven.vercel.app/</a>,
 
     },
     {
         name: 'Stock Market Analysis using Python',
         image: stockmarketanalysis,
         skills: 'Python, Data Science, NumPy, Pandas, Matplotlib, NSEPy',
-        link:'https://github.com/aaryan-verma/group-21-4A-project-Stock-Market-analysis-using-Python-'
+        link: <a href="https://github.com/aaryan-verma/group-21-4A-project-Stock-Market-analysis-using-Python-">https://github.com/aaryan-verma/group-21-4A-project-Stock-Market-analysis-using-Python-</a>
     },
     {
         name: 'LinkedIn Clone',
         image: linkedinclone,
         skills: 'ReactJS, Redux HTML, CSS, JavaScript',
-        link:'https://linkedin-clone-8e3c0.web.app/',
+        link:<a href="https://linkedin-clone-8e3c0.web.app/">https://linkedin-clone-8e3c0.web.app/</a>,
     },
     {
         name: 'Todo',
         image: todo,
         skills: 'Python, Flask, SQLAlchemy',
-        link : 'https://todo-aaryan.herokuapp.com/',
+        link : <a href="https://todo-aaryan.herokuapp.com/">https://todo-aaryan.herokuapp.com/</a>,
     },
     {
         name: 'Weather',
         image: weather,
         skills: 'HTML, CSS, JavaScript, React, Axios',
-        link : 'https://aaryan-verma.github.io/weather/',
+        link : <a href="https://aaryan-verma.github.io/weather/">https://aaryan-verma.github.io/weather/</a>,
     },
     {
         name: 'Drum Kit',
         image: drumkit,
         skills: 'HTML, CSS, JavaScript',
-        link : 'https://aaryan-verma.github.io/drumKit/',
+        link : <a href="https://aaryan-verma.github.io/drumKit/">https://aaryan-verma.github.io/drumKit/</a>,
     },
     {
         name: 'Dice Game',
         image: dicegame,
         skills: 'HTML, CSS, JavaScript',
-        link : 'https://aaryan-verma.github.io/Dice-game/',
+        link : <a href="https://aaryan-verma.github.io/Dice-game/">https://aaryan-verma.github.io/Dice-game/</a>,
     },
     {
         name: 'Simon Game',
         image: simongame,
         skills: 'HTML, CSS, JavaScript',
-        link : 'https://aaryan-verma.github.io/simonGame/',
+        link : <a href="https://aaryan-verma.github.io/simonGame/">https://aaryan-verma.github.io/simonGame/</a>,
     },
     {
         name: 'Audiobook Convertor',
         image: audiobookconvertor,
         skills: 'Python, PyPDF2, pyttsx3',
-        link : 'https://github.com/aaryan-verma/audioBookConvertor',
+        link : <a href="https://github.com/aaryan-verma/audioBookConvertor">https://github.com/aaryan-verma/audioBookConvertor</a>,
     },
     
 ]

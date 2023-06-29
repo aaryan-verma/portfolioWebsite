@@ -4,6 +4,9 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import '../styles/Home.css';
 import { FiDownload } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import { MdArrowForward } from 'react-icons/md';
+
 
 function Home() {
   return (
@@ -103,6 +106,14 @@ Time Management, Task Prioritization, Team Collaboration
 </li>
 </ol>
 </div>
+<div className='view-projects'>
+  <h1>View Projects</h1>
+  <p>Explore my portfolio of projects</p>
+  <Link to='/projects' className='view-projects-button'>
+    View Projects <MdArrowForward className='arrow-icon' />
+  </Link>
+</div>
+
 </div>
 );
 }

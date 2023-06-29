@@ -211,3 +211,40 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.view-projects {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.view-projects h1 {
+  color: #3e497a;
+  font-size: 35px;
+  margin-top: 0;
+}
+
+.view-projects p {
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+.view-projects-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #3e497a;
+  color: #f0f0f0;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.view-projects-button:hover {
+  background-color: #21325e;
+}
+
+.arrow-icon {
+  font-size: 20px;
+  margin-left: 5px;
+}

@@ -9,6 +9,7 @@ import dicegame from '../assests/dicegame.png'
 import simongame from '../assests/simongame.png'
 import audiobookconvertor from '../assests/audiobookconvertor.png'
 import weather from '../assests/weather.png'
+import tradingJournal from '../assests/tradingJournal.png'
 
 export const projectList = [
     {
@@ -16,6 +17,13 @@ export const projectList = [
         image: eventticketmarketplace,
         skills: 'Express, React, Node, Solidty, Blockchain, Hardhat',
         link : <a href="https://nft-gravity-seven.vercel.app/">https://nft-gravity-seven.vercel.app/</a>,
+
+    },
+    {
+        name: 'Trading Journal',
+        image: tradingJournal,
+        skills: 'Node, EJS, MongoDB, JavaScript, Cyclic',
+        link : <a href="https://trading-journal.cyclic.app/">https://trading-journal.cyclic.app/</a>,
 
     },
     {

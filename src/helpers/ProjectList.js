@@ -36,8 +36,8 @@ export const projectList = [
     {
         name: 'LinkedIn Clone',
         image: linkedinclone,
-        skills: 'ReactJS, Redux HTML, CSS, JavaScript',
-        link:<a href="https://linkedin-clone-8e3c0.web.app/">https://linkedin-clone-8e3c0.web.app/</a>,
+        skills: 'ReactJS, Redux HTML, CSS, JavaScript, Firebase, Vercel',
+        link:<a href="https://linkedin-clone-aaryan.vercel.app/">https://linkedin-clone-aaryan.vercel.app/</a>,
     },
     {
         name: 'Data Extraction',
@@ -48,8 +48,8 @@ export const projectList = [
     {
         name: 'Todo',
         image: todo,
-        skills: 'Python, Flask, SQLAlchemy',
-        link : <a href="https://todo-aaryan.herokuapp.com/">https://todo-aaryan.herokuapp.com/</a>,
+        skills: 'Python, Flask, SQLAlchemy, Railway',
+        link : <a href="https://todo-aaryan.up.railway.app/">https://todo-aaryan.up.railway.app/</a>,
     },
     {
         name: 'Weather',

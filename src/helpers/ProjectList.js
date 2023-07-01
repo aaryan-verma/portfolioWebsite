@@ -10,6 +10,7 @@ import simongame from '../assests/simongame.png'
 import audiobookconvertor from '../assests/audiobookconvertor.png'
 import weather from '../assests/weather.png'
 import tradingJournal from '../assests/tradingJournal.png'
+import dataExtraction from '../assests/dataExtraction.png'
 
 export const projectList = [
     {
@@ -37,6 +38,12 @@ export const projectList = [
         image: linkedinclone,
         skills: 'ReactJS, Redux HTML, CSS, JavaScript',
         link:<a href="https://linkedin-clone-8e3c0.web.app/">https://linkedin-clone-8e3c0.web.app/</a>,
+    },
+    {
+        name: 'Data Extraction',
+        image: dataExtraction,
+        skills: 'Python, truecallerpy, apify_client',
+        link:<a href="https://github.com/aaryan-verma/data-extraction">https://github.com/aaryan-verma/data-extraction</a>,
     },
     {
         name: 'Todo',

@@ -21,7 +21,7 @@ function Home() {
         <div className='prompt'>
           <p>A Software Developer with a passion for learning and creating.</p>
           <a
-            href='https://drive.google.com/file/d/1cw7lJ6DkNUF1EED3hZywm4YXuvuFa4SZ/view?usp=sharing'
+            href='https://drive.google.com/file/d/1vQDP4kbh2kNbrZs5RGWlz2xCg_FzTzJS/view?usp=sharing'
             target='_blank'
             rel='noopener noreferrer'
             className='resume-button'

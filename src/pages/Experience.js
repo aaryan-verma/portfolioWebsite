@@ -37,6 +37,29 @@ function Experience() {
                     <h3 className='vertical-timeline-element-title'>Pranveer Singh Institute Of Technology, Kanpur</h3>
                     <p>B.Tech (Computer Science)</p>
             </VerticalTimelineElement>
+
+
+            <VerticalTimelineElement 
+                className='vertical-timeline-element--education'
+                date = '06/2023 - 09/2023 '
+                iconStyle={{background: '#3e497a', color : '#fff'}}
+                icon = {<SchoolIcon/>}
+                >
+                    <h3 className='vertical-timeline-element-title'>EddyTools Tech Solutions</h3>
+                    <p>Software Engineer Trainee</p>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement 
+                className='vertical-timeline-element--education'
+                date = '09/2023 - 02/2024'
+                iconStyle={{background: '#3e497a', color : '#fff'}}
+                icon = {<SchoolIcon/>}
+                >
+                    <h3 className='vertical-timeline-element-title'>Razorpay Software Pvt. Ltd.</h3>
+                    <p>Junior Technical Consultant</p>
+            </VerticalTimelineElement>
+            
+
         </VerticalTimeline>
     </div>
   );

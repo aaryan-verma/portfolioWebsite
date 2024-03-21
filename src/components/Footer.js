@@ -17,7 +17,7 @@ function Footer() {
             < a href = 'https://www.instagram.com/__aaryan__verma__/'><InstagramIcon/></a>
             <a href = 'https://twitter.com/__aaryanverma/'><TwitterIcon/></a>
         </div>
-        <p>&copy; 2022 portfolio</p>
+        <p>&copy; 2024 portfolio</p>
     </div>
   )
 }

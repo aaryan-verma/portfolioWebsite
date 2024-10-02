@@ -20,12 +20,12 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.3rem 1.2rem;
+    padding: 0.3rem 0.3rem;
     background-color: #3e497a;
     color: #f0f0f0;
     border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
+    border-radius: 5rem;
+    font-size: 0.5rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
   }
@@ -80,7 +80,9 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem; /* Add margin to push the skills section further down */
+  margin-top: 3rem;
+  padding: 0 2rem; /* Add padding to both sides */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
 .skills h1 {
@@ -93,6 +95,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
   gap: 2rem; /* Add gap between grid items */
+  padding: 0; /* Remove any default padding */
+  width: 100%; /* Ensure the list takes full width of its container */
 }
 
 .list .item {
@@ -133,12 +137,12 @@
     text-align: center;
   }
 
-  .list {
-    padding: 0;
+  .skills h1 {
+    font-size: 30px;
   }
 
-  .skills h2 {
-    font-size: 30px;
+  .skills .list {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -150,6 +154,8 @@
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
+  padding: 0 2rem; /* Add padding to both sides */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
 .skills h1 {
@@ -162,6 +168,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  padding: 0; /* Remove any default padding */
+  width: 100%; /* Ensure the list takes full width of its container */
 }
 
 .list .item {

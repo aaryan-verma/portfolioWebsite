@@ -4,6 +4,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import '../styles/Home.css';
 import { FiDownload } from 'react-icons/fi';
+import { FaCloudDownloadAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { MdArrowForward } from 'react-icons/md';
 
@@ -26,7 +27,7 @@ function Home() {
             rel='noopener noreferrer'
             className='resume-button'
           >
-            <FiDownload className='resume-icon' />
+            <FaCloudDownloadAlt className='resume-icon' />
             <span className='resume-text'>Download Resume</span>
           </a>
           <a href='https://www.linkedin.com/in/aaryan-verma/'>
@@ -45,27 +46,45 @@ function Home() {
         <h1>Skills</h1>
         <ol className='list'>
           <li className='item'>
+            <h1>Languages</h1>
+            <span>
+              JavaScript, TypeScript, Python, Java, C++, C
+            </span>
+          </li>
+          <li className='item'>
             <h1>Front-End</h1>
             <span>
-              React, Redux, HTML, CSS, JavaScript
+              HTML, CSS, SCSS, JavaScript, TypeScript, React, Redux, Angular 16, Next.js, Tailwind CSS, Figma
             </span>
           </li>
           <li className='item'>
             <h1>Back-End</h1>
             <span>
-              Express, Node.js, Flask
+              Node.js, Express.js, FastAPI, Flask
             </span>
           </li>
           <li className='item'>
-            <h1>Languages</h1>
+            <h1>Database Management</h1>
             <span>
-              Python, JavaScript, C, C++, Java
+              SQL, MySQL, PostgreSQL, MongoDB, NoSQL, Database Design, Data Modeling, Query Optimization
+            </span>
+          </li>
+          <li className='item'>
+            <h1>Software Engineering</h1>
+            <span>
+              Object-Oriented Programming, Design Patterns, Software Development Life Cycle, System Design
+            </span>
+          </li>
+          <li className='item'>
+            <h1>DevOps & Cloud</h1>
+            <span>
+              Docker, AWS EC2, Firebase
             </span>
           </li>
           <li className='item'>
             <h1>Data Science</h1>
             <span>
-              Data Analysis, Machine Learning, Python Libraries (NumPy, Pandas, Matplotlib, etc.), Data Visualization
+              Data Analysis, NumPy, Pandas, Matplotlib, Data Visualization
             </span>
           </li>
           <li className='item'>
@@ -75,47 +94,22 @@ function Home() {
             </span>
           </li>
           <li className='item'>
-            <h1>Software Engineering</h1>
-            <span>
-              Object-Oriented Programming, Design Patterns, Software Development Life Cycle
-            </span>
-          </li>
-          <li className='item'>
-            <h1>Database Management</h1>
-            <span>
-              SQL, MySQL, MongoDB
-            </span>
-          </li>
-          <li className='item'>
             <h1>Problem Solving</h1>
             <span>
               Data Structures, Algorithms, Logical Reasoning
             </span>
           </li>
-          <li className='item'>
-            <h1>Communication Skills</h1>
-            <span>
-              Effective Communication, Presentation Skills, Technical Writing
-            </span>
-          </li>
-          <li className='item'>
-            <h1>Organizational Skills</h1>
-<span>
-Time Management, Task Prioritization, Team Collaboration
-</span>
-</li>
-</ol>
-</div>
-<div className='view-projects'>
-  <h1>View Projects</h1>
-  <p>Explore my portfolio of projects</p>
-  <Link to='/projects' className='view-projects-button'>
-    View Projects <MdArrowForward className='arrow-icon' />
-  </Link>
-</div>
-
-</div>
-);
+        </ol>
+      </div>
+      <div className='view-projects'>
+        <h1>View Projects</h1>
+        <p>Explore my portfolio of projects</p>
+        <Link to='/projects' className='view-projects-button'>
+          View Projects <MdArrowForward className='arrow-icon' />
+        </Link>
+      </div>
+    </div>
+  );
 }
 
 export default Home;

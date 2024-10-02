@@ -22,6 +22,11 @@
   }
   
   @media only screen and (max-width: 600px) {
+    .footer {
+      height: auto; /* Adjust height to auto for better responsiveness */
+      padding-bottom: 20px; /* Add padding to the bottom */
+    }
+    
     .footer svg {
       font-size: 50px;
     }

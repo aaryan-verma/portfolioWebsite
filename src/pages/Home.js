@@ -8,7 +8,28 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { MdArrowForward } from 'react-icons/md';
 
+const skillsData = [
+  { title: 'Languages', content: 'JavaScript, TypeScript, Python, Java, C++, C' },
+  { title: 'Front-End', content: 'HTML, CSS, SCSS, JavaScript, TypeScript, React, Redux, Angular 16, Next.js, Tailwind CSS, Figma' },
+  { title: 'Back-End', content: 'Node.js, Express.js, FastAPI, Flask' },
+  { title: 'Database Management', content: 'SQL, MySQL, PostgreSQL, MongoDB, NoSQL, Database Design, Data Modeling, Query Optimization' },
+  { title: 'Software Engineering', content: 'Object-Oriented Programming, Design Patterns, Software Development Life Cycle, System Design' },
+  { title: 'DevOps & Cloud', content: 'Docker, AWS EC2, Firebase' },
+  { title: 'Data Science', content: 'Data Analysis, NumPy, Pandas, Matplotlib, Data Visualization' },
+  { title: 'Blockchain Development', content: 'Solidity, Ethereum, Smart Contracts' },
+  { title: 'Problem Solving', content: 'Data Structures, Algorithms, Logical Reasoning' }
+];
+
 function Home() {
+  const renderSkills = (skills) => {
+    return skills.map((skill, index) => (
+      <div key={index} className='item'>
+        <h1>{skill.title}</h1>
+        <span>{skill.content}</span>
+      </div>
+    ));
+  };
+
   return (
     <div className='home'>
       <div className='about'>
@@ -45,64 +66,13 @@ function Home() {
         <h1>Skills</h1>
         <div className='list'>
           <div className='row'>
-            <div className='item'>
-              <h1>Languages</h1>
-              <span>
-                JavaScript, TypeScript, Python, Java, C++, C
-              </span>
-            </div>
-            <div className='item'>
-              <h1>Front-End</h1>
-              <span>
-                HTML, CSS, SCSS, JavaScript, TypeScript, React, Redux, Angular 16, Next.js, Tailwind CSS, Figma
-              </span>
-            </div>
-            <div className='item'>
-              <h1>Back-End</h1>
-              <span>
-                Node.js, Express.js, FastAPI, Flask
-              </span>
-            </div>
+            {renderSkills(skillsData.slice(0, 3))}
           </div>
           <div className='row'>
-            <div className='item'>
-              <h1>Database Management</h1>
-              <span>
-                SQL, MySQL, PostgreSQL, MongoDB, NoSQL, Database Design, Data Modeling, Query Optimization
-              </span>
-            </div>
-            <div className='item'>
-              <h1>Software Engineering</h1>
-              <span>
-                Object-Oriented Programming, Design Patterns, Software Development Life Cycle, System Design
-              </span>
-            </div>
-            <div className='item'>
-              <h1>DevOps & Cloud</h1>
-              <span>
-                Docker, AWS EC2, Firebase
-              </span>
-            </div>
+            {renderSkills(skillsData.slice(3, 6))}
           </div>
           <div className='row'>
-            <div className='item'>
-              <h1>Data Science</h1>
-              <span>
-                Data Analysis, NumPy, Pandas, Matplotlib, Data Visualization
-              </span>
-            </div>
-            <div className='item'>
-              <h1>Blockchain Development</h1>
-              <span>
-                Solidity, Ethereum, Smart Contracts
-              </span>
-            </div>
-            <div className='item'>
-              <h1>Problem Solving</h1>
-              <span>
-                Data Structures, Algorithms, Logical Reasoning
-              </span>
-            </div>
+            {renderSkills(skillsData.slice(6, 9))}
           </div>
         </div>
       </div>

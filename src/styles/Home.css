@@ -156,9 +156,9 @@
     }
     
     .list .item {
-      width: calc(100% - 4rem); /* Adjust the width to fit within the screen */
-      max-width: 100%; /* Ensure the width does not exceed the container */
-      margin: 0 auto; /* Center the items */
+      width: calc(100% - 4rem);
+      max-width: 100%;
+      margin: 0 auto;
     }
   }
   
@@ -176,10 +176,11 @@
       flex: 0 0 80%;
       min-width: 250px;
       scroll-snap-align: start;
+      margin: 0 1rem;
     }
     
     .list .item:last-child {
-      margin-right: 0;
+      margin-right: 1rem;
     }
     
     .skills {

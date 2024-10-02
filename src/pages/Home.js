@@ -8,7 +8,6 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { MdArrowForward } from 'react-icons/md';
 
-
 function Home() {
   return (
     <div className='home'>
@@ -44,62 +43,68 @@ function Home() {
 
       <div className='skills'>
         <h1>Skills</h1>
-        <ol className='list'>
-          <li className='item'>
-            <h1>Languages</h1>
-            <span>
-              JavaScript, TypeScript, Python, Java, C++, C
-            </span>
-          </li>
-          <li className='item'>
-            <h1>Front-End</h1>
-            <span>
-              HTML, CSS, SCSS, JavaScript, TypeScript, React, Redux, Angular 16, Next.js, Tailwind CSS, Figma
-            </span>
-          </li>
-          <li className='item'>
-            <h1>Back-End</h1>
-            <span>
-              Node.js, Express.js, FastAPI, Flask
-            </span>
-          </li>
-          <li className='item'>
-            <h1>Database Management</h1>
-            <span>
-              SQL, MySQL, PostgreSQL, MongoDB, NoSQL, Database Design, Data Modeling, Query Optimization
-            </span>
-          </li>
-          <li className='item'>
-            <h1>Software Engineering</h1>
-            <span>
-              Object-Oriented Programming, Design Patterns, Software Development Life Cycle, System Design
-            </span>
-          </li>
-          <li className='item'>
-            <h1>DevOps & Cloud</h1>
-            <span>
-              Docker, AWS EC2, Firebase
-            </span>
-          </li>
-          <li className='item'>
-            <h1>Data Science</h1>
-            <span>
-              Data Analysis, NumPy, Pandas, Matplotlib, Data Visualization
-            </span>
-          </li>
-          <li className='item'>
-            <h1>Blockchain Development</h1>
-            <span>
-              Solidity, Ethereum, Smart Contracts
-            </span>
-          </li>
-          <li className='item'>
-            <h1>Problem Solving</h1>
-            <span>
-              Data Structures, Algorithms, Logical Reasoning
-            </span>
-          </li>
-        </ol>
+        <div className='list'>
+          <div className='row'>
+            <div className='item'>
+              <h1>Languages</h1>
+              <span>
+                JavaScript, TypeScript, Python, Java, C++, C
+              </span>
+            </div>
+            <div className='item'>
+              <h1>Front-End</h1>
+              <span>
+                HTML, CSS, SCSS, JavaScript, TypeScript, React, Redux, Angular 16, Next.js, Tailwind CSS, Figma
+              </span>
+            </div>
+            <div className='item'>
+              <h1>Back-End</h1>
+              <span>
+                Node.js, Express.js, FastAPI, Flask
+              </span>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='item'>
+              <h1>Database Management</h1>
+              <span>
+                SQL, MySQL, PostgreSQL, MongoDB, NoSQL, Database Design, Data Modeling, Query Optimization
+              </span>
+            </div>
+            <div className='item'>
+              <h1>Software Engineering</h1>
+              <span>
+                Object-Oriented Programming, Design Patterns, Software Development Life Cycle, System Design
+              </span>
+            </div>
+            <div className='item'>
+              <h1>DevOps & Cloud</h1>
+              <span>
+                Docker, AWS EC2, Firebase
+              </span>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='item'>
+              <h1>Data Science</h1>
+              <span>
+                Data Analysis, NumPy, Pandas, Matplotlib, Data Visualization
+              </span>
+            </div>
+            <div className='item'>
+              <h1>Blockchain Development</h1>
+              <span>
+                Solidity, Ethereum, Smart Contracts
+              </span>
+            </div>
+            <div className='item'>
+              <h1>Problem Solving</h1>
+              <span>
+                Data Structures, Algorithms, Logical Reasoning
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <div className='view-projects'>
         <h1>View Projects</h1>

@@ -37,7 +37,7 @@ function Home() {
           <img src={require('../assests/26904.png')} alt='Profile' />
         </div>
 
-        <h2>Hi, My Name is Aaryan</h2>
+        <h2>Hi, I'm Aaryan</h2>
 
         <div className='prompt'>
           <p>A Software Developer with a passion for learning and creating.</p>

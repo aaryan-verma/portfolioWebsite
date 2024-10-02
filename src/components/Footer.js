@@ -11,15 +11,14 @@ function Footer() {
 
   return (
     <div className='footer'>
-        <div className='socialMedia'>
-        <a href='https://www.linkedin.com/in/aaryan-verma/'><LinkedInIcon/></a>
-
-        <a href="mailto:aryanverma.av2000@gmail.com"><EmailIcon/></a>
-        <a href='https://github.com/aaryan-verma/'><GitHubIcon/></a>
-            <a href='https://www.instagram.com/__aaryan__verma__/'><InstagramIcon/></a>
-            <a href='https://twitter.com/__aaryanverma/'><TwitterIcon/></a>
-        </div>
-        <p>&copy; {currentYear} portfolio</p>
+      <div className='socialMedia'>
+        <a href='https://www.linkedin.com/in/aaryan-verma/'><LinkedInIcon /></a>
+        <a href="mailto:aryanverma.av2000@gmail.com"><EmailIcon /></a>
+        <a href='https://github.com/aaryan-verma/'><GitHubIcon /></a>
+        <a href='https://www.instagram.com/__aaryan__verma__/'><InstagramIcon /></a>
+        <a href='https://twitter.com/__aaryanverma/'><TwitterIcon /></a>
+      </div>
+      <p>&copy; {currentYear} portfolio</p>
     </div>
   )
 }

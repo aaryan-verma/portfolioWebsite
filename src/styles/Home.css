@@ -165,7 +165,8 @@
   @media only screen and (max-width: 500px) {
     .skills .row {
       display: flex;
-      overflow-x: scroll; /* Always show scrollbar */
+      overflow-x: scroll; /* Always show horizontal scrollbar */
+      overflow-y: hidden; /* Hide vertical scrollbar */
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
       gap: 1rem;

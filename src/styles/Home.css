@@ -125,7 +125,10 @@
   
   @media only screen and (max-width: 900px) {
     .about h2 {
-      font-size: 40px;
+      padding-top: 1rem;
+      font-size: 35px;
+      margin-top: 2rem;
+      margin-bottom: 0;
     }
     
     .about .prompt {
@@ -165,8 +168,7 @@
   @media only screen and (max-width: 500px) {
     .skills .row {
       display: flex;
-      overflow-x: scroll; /* Always show horizontal scrollbar */
-      overflow-y: hidden; /* Hide vertical scrollbar */
+      overflow-x: scroll; /* Always show scrollbar */
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
       gap: 1rem;

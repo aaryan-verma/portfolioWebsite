@@ -11,8 +11,16 @@ import audiobookconvertor from '../assests/audiobookconvertor.png'
 import weather from '../assests/weather.png'
 import tradingJournal from '../assests/tradingJournal.png'
 import dataExtraction from '../assests/dataExtraction.png'
+import moviecritic from '../assests/moviecritic.png'
 
 export const projectList = [
+    {
+        name: 'MovieCritic',
+        image: moviecritic,
+        skills: 'React, React Router, Axios, Tailwind CSS, TypeScript, Vite, ESLint, Node.js, Express, Sequelize, PostgreSQL, CORS, Dotenv, Docker, AWS EC2',
+        link : <a href="https://portfolio.aaryanverma.tech/c:\Users\Hp\OneDrive\Desktop\moviecriticMobile.png">https://portfolio.aaryanverma.tech/</a>,
+
+    },
     {
         name: 'Decentralized Multichain ECommerce',
         image: eventticketmarketplace,

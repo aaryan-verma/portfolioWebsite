@@ -10,7 +10,9 @@ function ProjectDisplay() {
   return (
     <div className='project'>
         <h1>{project.name}</h1>
-        <img src = {project.image} />
+        <div className='projectDisplay'>
+          <img src = {project.image} />
+        </div>
         <p><b>Skills:</b> {project.skills}</p>
         <p><b>{project.link}</b></p>
         <GitHubIcon/>

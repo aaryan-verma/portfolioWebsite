@@ -1,29 +1,75 @@
 .project {
-    width: 100%;
-    height: calc(100vh - 100px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.project h1 {
+  margin-top: 20px;
+  color: #3e497a;
+  font-size: 35px;
+  text-align: center;
+  position: relative;
+  top: -20px;
+}
+
+.projectDisplay {
+  width: 100%;
+  max-width: 700px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.projectDisplay img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.project p {
+  font-size: 20px;
+  color: #3e497a;
+  text-align: center;
+  word-wrap: break-word;
+  padding: 0 1rem;
+}
+
+.project a {
+  font-size: 20px;
+  color: #3e497a;
+  text-align: center;
+  word-wrap: break-word;
+  padding: 0 1rem;
+  text-decoration: none;
+}
+
+.project svg {
+  font-size: 40px;
+  color: #3e497a;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .project p,
+  .project a {
+    font-size: 18px;
+    padding: 0 0.5rem;
   }
-  
+
   .project h1 {
-    margin-top: 50px;
-    color: #3e497a;
-    font-size: 35px;
+    font-size: 28px;
+    margin-top: 10px;
+    top: -10px;
   }
-  .project img {
-    width: 700px;
-    border-radius: 10px;
-  }
-  
-  .project p {
-    font-size: 40px;
-    color: #3e497a;
-  }
-  
+
   .project svg {
-    font-size: 60px;
-    color: #3e497a;
+    font-size: 30px;
   }
+}

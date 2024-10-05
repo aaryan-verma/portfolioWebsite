@@ -152,3 +152,19 @@ input,textarea{
   }
 }
 
+.custom-loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 24px;
+    color: #3e497a;
+    text-align: center;
+  }
+  
+  .loader-container {
+    margin-top: 20px;
+  }
+  
+

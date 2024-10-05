@@ -26,13 +26,6 @@
   justify-content: center;
 }
 
-.projectDisplay img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
 .project p {
   font-size: 20px;
   color: #3e497a;
@@ -54,6 +47,22 @@
   font-size: 40px;
   color: #3e497a;
   margin-top: 10px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-top: 1rem;
+}
+
+.projectDisplay img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
 }
 
 @media (max-width: 768px) {

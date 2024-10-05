@@ -1,14 +1,36 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
 import SchoolIcon from '@material-ui/icons/School'
 import WorkIcon from '@material-ui/icons/Work';
-import '../styles/Experience.css'
+import SyncLoader from 'react-spinners/SyncLoader';
+import '../styles/Experience.css';
 
 function Experience() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className='experience'>
-        <VerticalTimeline lineColor='#3e497a'>
+      {loading ? (
+        <div className="loader" style={{ opacity: 0.5 }}>
+          <SyncLoader 
+            size={10}
+            color={"#123abc"}
+            loading={loading}/>
+        </div>
+      ) : (
+        <div className='content'>
+          <h1>My Experience</h1>
+          <p>Details about your professional experience go here.</p>
+          <VerticalTimeline lineColor='#3e497a'>
 
             <VerticalTimelineElement 
                 className='vertical-timeline-element--education'
@@ -63,6 +85,8 @@ function Experience() {
             
 
         </VerticalTimeline>
+        </div>
+      )}
     </div>
   );
 }

@@ -18,7 +18,7 @@ export const projectList = [
         name: 'MovieCritic',
         image: moviecritic,
         skills: 'React, React Router, Axios, Tailwind CSS, TypeScript, Vite, ESLint, Node.js, Express, Sequelize, PostgreSQL, CORS, Dotenv, Docker, AWS EC2',
-        link : <a href="https://aaryanverma.tech">https://portfolio.aaryanverma.tech/</a>,
+        link : <a href="https://aaryanverma.tech">https://aaryanverma.tech/</a>,
 
     },
     {

@@ -183,6 +183,9 @@ input::placeholder, textarea::placeholder {
 
 /* Media Queries */
 @media screen and (max-width: 1024px) {
+    .contact {
+        padding-top: 100px;
+    }
     .container.contact__container {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -190,11 +193,23 @@ input::placeholder, textarea::placeholder {
 }
 
 @media screen and (max-width: 600px) {
+    .contact {
+        padding-top: 100px;
+    }
     .contact h1 {
         font-size: 2.5rem;
     }
     .contact__option {
         padding: 1.5rem;
+    }
+    .location-widget {
+        padding: 1.5rem;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .location-text h3 {
+        font-size: 1.2rem;
     }
 }
 

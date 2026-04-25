@@ -188,6 +188,10 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .experience {
+    padding-top: 100px;
+  }
+  
   .experience h1 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -209,21 +213,48 @@
     display: none; /* Hide hover hint on mobile */
   }
 
+  .mobile-tap-hint {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    opacity: 0.6;
+    margin-top: 10px;
+    font-weight: 300;
+  }
+
   .experience-details {
     position: relative; /* No absolute popping on mobile */
     top: 0;
     left: 0;
     width: 100%;
+    min-width: unset;
     transform: none;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
     background: transparent;
     border: none;
     box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    word-break: break-word;
+    
+    /* Animation base */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
     padding: 0;
-    margin-top: 20px;
-    display: block; /* Always show or default flow */
+    margin-top: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .experience-details.mobile-expanded {
+    max-height: 1500px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .experience-details::before {
@@ -232,5 +263,12 @@
 
   .experience-details li {
     font-size: 0.9rem;
+  }
+}
+
+/* Hide mobile-hint on desktop */
+@media only screen and (min-width: 801px) {
+  .mobile-tap-hint {
+    display: none;
   }
 }

@@ -125,6 +125,17 @@
 }
 
 /* Typography Inside Bento */
+.bento-bio-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.mobile-profile-pic {
+  display: none;
+}
+
 .bento-bio h1 {
   font-size: 4rem;
   font-weight: 300;
@@ -264,6 +275,9 @@
 
 /* Responsive Rules */
 @media (max-width: 900px) {
+  .home {
+    padding-top: 100px;
+  }
   .bento-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -291,9 +305,22 @@
   .bento-container {
     grid-template-columns: 1fr;
   }
-  .bento-bio, .bento-profile, .bento-skill, .bento-expertise, .bento-interests, .bento-achievements, .bento-projects {
+  .bento-bio, .bento-skill, .bento-expertise, .bento-interests, .bento-achievements, .bento-projects {
     grid-column: span 1;
     grid-row: auto;
+  }
+  .bento-profile {
+    display: none;
+  }
+  .mobile-profile-pic {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    cursor: pointer;
   }
   .bento-bio h1 {
     font-size: 2.5rem;
@@ -301,4 +328,41 @@
   .bento-bio .socials {
     flex-wrap: wrap;
   }
+}
+
+/* Profile Photo Modal */
+.profile-photo-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  animation: fadeInModal 0.3s ease forwards;
+}
+
+.profile-photo-modal img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.8);
+  animation: scaleUpModal 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUpModal {
+  from { transform: scale(0.9); }
+  to { transform: scale(1); }
 }

@@ -13,6 +13,7 @@ const fullBio = "Software Engineer driving robust fintech and microservices arch
 function Home() {
   const [nameText, setNameText] = useState('');
   const [bioText, setBioText] = useState('');
+  const [isPhotoOpen, setIsPhotoOpen] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
@@ -39,7 +40,15 @@ function Home() {
         
         {/* Top Row */}
         <div className='bento-item bento-bio'>
-          <h1>{nameText}{nameText.length < fullName.length && <span className="cursor">|</span>}</h1>
+          <div className='bento-bio-header'>
+            <h1>{nameText}{nameText.length < fullName.length && <span className="cursor">|</span>}</h1>
+            <img 
+              className='mobile-profile-pic' 
+              src={require('../assests/26904.png')} 
+              alt='Profile' 
+              onClick={() => setIsPhotoOpen(true)}
+            />
+          </div>
           <h2>{bioText}{nameText.length === fullName.length && bioText.length < fullBio.length && <span className="cursor">|</span>}</h2>
           <div className='socials'>
             <a
@@ -119,6 +128,13 @@ function Home() {
         </Link>
         
       </div>
+
+      {/* Mobile Profile Photo Modal */}
+      {isPhotoOpen && (
+        <div className="profile-photo-modal" onClick={() => setIsPhotoOpen(false)}>
+          <img src={require('../assests/26904.png')} alt='Profile Full' />
+        </div>
+      )}
     </div>
   );
 }

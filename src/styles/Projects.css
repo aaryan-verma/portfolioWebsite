@@ -95,6 +95,9 @@
   }
   
   @media only screen and (max-width: 800px) {
+    .projects {
+      padding-top: 100px;
+    }
     .projects .projectTitle {
       font-size: 2.5rem;
       margin-bottom: 3rem;

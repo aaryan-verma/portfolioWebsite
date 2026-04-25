@@ -21,7 +21,6 @@ function Experience() {
                   <h3 className='vertical-timeline-element-title'>TransFi India Private Limited, Remote</h3>
                   <p className='vertical-timeline-element-subtitle'>Senior Software Engineer (Promoted Apr 2026)</p>
                   <ul className='experience-details'>
-                    
                     <li>Contributed to the Cyber Tech team, collaborating with Compliance, Network Operations, Product, and Engineering teams to build secure fintech infrastructure supporting 20M+ users and $1B+ transaction volume.</li>
                     <li>Developed and deployed multiple microservices while structuring multi-level KYC/KYB verification workflows, incorporating screening tiers, document validation, and webhook-driven status updates.</li>
                     <li>Strengthened the Risk Profile Management System by introducing workflows for risk status tracking, linked profile detection, rule whitelisting, bypass configurations, and audit trails.</li>

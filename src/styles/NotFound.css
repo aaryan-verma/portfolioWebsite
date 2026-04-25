@@ -1,0 +1,112 @@
+.not-found {
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 100px 20px;
+  box-sizing: border-box;
+}
+
+.terminal-container {
+  width: 100%;
+  max-width: 700px;
+  background-color: #0d0d0d;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255,255,255,0.05) inset;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeSlideIn 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terminal-header {
+  background-color: #1a1a1a;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #262626;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+.terminal-header .title {
+  margin-left: auto;
+  margin-right: auto;
+  color: #666;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  padding-right: 50px; 
+}
+
+.terminal-body {
+  padding: 40px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-body pre {
+  margin: 0;
+  color: #ff5f56;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.terminal-body .cursor {
+  animation: blink 1s step-end infinite;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.recover-btn {
+  margin-top: 40px;
+  align-self: flex-start;
+  padding: 12px 25px;
+  background-color: transparent;
+  color: #27c93f;
+  border: 1px solid #27c93f;
+  border-radius: 4px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  animation: fadeSlideUp 0.5s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recover-btn:hover {
+  background-color: #27c93f;
+  color: #0d0d0d;
+  box-shadow: 0 0 15px rgba(39, 201, 63, 0.4);
+}

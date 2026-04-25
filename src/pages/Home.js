@@ -1,116 +1,123 @@
 import React, { useState, useEffect } from 'react';
-import PulseLoader from 'react-spinners/PulseLoader';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
-import '../styles/Home.css';
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { MdArrowForward } from 'react-icons/md';
+import '../styles/Home.css';
 
-const skillsData = [
-  { title: 'Languages', content: 'JavaScript, TypeScript, Python, Java, C++, C' },
-  { title: 'Front-End', content: 'HTML, CSS, SCSS, JavaScript, TypeScript, React, Redux, Angular 16, Next.js, Tailwind CSS, Figma' },
-  { title: 'Back-End', content: 'Node.js, Express.js, FastAPI, Flask' },
-  { title: 'Database Management', content: 'SQL, MySQL, PostgreSQL, MongoDB, NoSQL, Database Design, Data Modeling, Query Optimization' },
-  { title: 'Software Engineering', content: 'Object-Oriented Programming, Design Patterns, Software Development Life Cycle, System Design' },
-  { title: 'DevOps & Cloud', content: 'Docker, AWS EC2, Firebase' },
-  { title: 'Data Science', content: 'Data Analysis, NumPy, Pandas, Matplotlib, Data Visualization' },
-  { title: 'Blockchain Development', content: 'Solidity, Ethereum, Smart Contracts' },
-  { title: 'Problem Solving', content: 'Data Structures, Algorithms, Logical Reasoning' }
-];
+const fullName = "Aaryan Verma";
+const fullBio = "Software Engineer driving robust fintech and microservices architecture.";
 
 function Home() {
-  const [loadingStates, setLoadingStates] = useState(Array(skillsData.length).fill(true));
+  const [nameText, setNameText] = useState('');
+  const [bioText, setBioText] = useState('');
 
   useEffect(() => {
-    const timers = skillsData.map((_, index) =>
-      setTimeout(() => {
-        setLoadingStates(prevStates => {
-          const newStates = [...prevStates];
-          newStates[index] = false;
-          return newStates;
-        });
-      }, 500 + index * 100)
-    );
+    let isMounted = true;
+    const typeText = async () => {
+      for (let i = 0; i <= fullName.length; i++) {
+        if (!isMounted) return;
+        setNameText(fullName.slice(0, i));
+        await new Promise(r => setTimeout(r, 40));
+      }
+      for (let i = 0; i <= fullBio.length; i++) {
+        if (!isMounted) return;
+        setBioText(fullBio.slice(0, i));
+        await new Promise(r => setTimeout(r, 10));
+      }
+    };
 
-    return () => timers.forEach(timer => clearTimeout(timer));
+    typeText();
+    return () => { isMounted = false; };
   }, []);
-
-  const renderSkills = (skills) => {
-    return skills.map((skill, index) => (
-      <div key={index} className='item'>
-        {loadingStates[index] ? (
-          <div className="loader" style={{ opacity: 0.5 }}>
-            <PulseLoader 
-              size={10}
-              color={"#123abc"}
-              loading={loadingStates[index]}/>
-          </div>
-        ) : (
-          <>
-            <h1>{skill.title}</h1>
-            <span>{skill.content}</span>
-          </>
-        )}
-      </div>
-    ));
-  };
 
   return (
     <div className='home'>
-      <div className='content'>
-        <div className='about'>
-          <div className='me'>
-            <img src={require('../assests/26904.png')} alt='Profile' />
-          </div>
-
-          <h2>Hi, I'm Aaryan</h2>
-
-          <div className='prompt'>
-            <p>A Software Developer with a passion for learning and creating.</p>
+      <div className='bento-container'>
+        
+        {/* Top Row */}
+        <div className='bento-item bento-bio'>
+          <h1>{nameText}{nameText.length < fullName.length && <span className="cursor">|</span>}</h1>
+          <h2>{bioText}{nameText.length === fullName.length && bioText.length < fullBio.length && <span className="cursor">|</span>}</h2>
+          <div className='socials'>
             <a
-              href='https://drive.google.com/file/d/1XR5JKcRHmtVcR_w4PzVqbg1-NUjvFZch/view?usp=drive_link'
+              href='https://drive.google.com/file/d/1LI5tOvIbBC0r1UYUGg0QXBHffE584WdQ/view'
               target='_blank'
               rel='noopener noreferrer'
-              className='resume-button'
+              className='resume-btn'
             >
-              <FaCloudDownloadAlt className='resume-icon' />
-              <span className='resume-text'>Download Resume</span>
+              <FaCloudDownloadAlt style={{ fontSize: '1.2rem' }} /> Resume
             </a>
-            <a href='https://www.linkedin.com/in/aaryan-verma/'>
+            <a href='https://www.linkedin.com/in/aaryan-verma/' target="_blank" rel="noopener noreferrer">
               <LinkedInIcon />
             </a>
             <a href='mailto:aryanverma.av2000@gmail.com'>
               <EmailIcon />
             </a>
-            <a href='https://github.com/aaryan-verma/'>
+            <a href='https://github.com/aaryan-verma/' target="_blank" rel="noopener noreferrer">
               <GitHubIcon />
             </a>
           </div>
         </div>
+        
+        <div className='bento-item bento-profile'>
+          <img src={require('../assests/26904.png')} alt='Profile' />
+        </div>
 
-        <div className='skills'>
-          <h1>Skills</h1>
-          <div className='list'>
-            <div className='row'>
-              {renderSkills(skillsData.slice(0, 3))}
+        {/* Middle Row Skills */}
+        <div className='bento-item bento-skill'>
+          <h3>Languages</h3>
+          <p>Python, Java, JavaScript, C, SQL</p>
+        </div>
+        <div className='bento-item bento-skill'>
+          <h3>Frameworks</h3>
+          <p>FastAPI, Flask, Node.js, Next.js, React.js, Angular 16, Vue, Tailwind CSS</p>
+        </div>
+        <div className='bento-item bento-skill'>
+          <h3>Tools & Tech</h3>
+          <p>Docker, RabbitMQ, Git, AWS (EC2, ECS, ECR, SQS, S3), Datadog, Sumsub</p>
+        </div>
+        <div className='bento-item bento-skill'>
+          <h3>Databases</h3>
+          <p>PostgreSQL, MongoDB, Redis, ClickHouse</p>
+        </div>
+
+        {/* Bottom Rows */}
+        <div className='bento-item bento-expertise'>
+          <h3>Expertise</h3>
+          <p>Data Structures and Algorithms, System Design, Microservices, Distributed Systems, Backend Development</p>
+        </div>
+
+        <div className='bento-item bento-interests'>
+          <h3>Interests & Obsessions</h3>
+          <p>Active Day Trading (Scalping), Algorithmic Market Analysis, Competitive Programming</p>
+        </div>
+
+        <div className='bento-item bento-achievements'>
+          <h3>Achievements</h3>
+          <div className='achievements-grid'>
+            <div className='achievement-card'>
+              <h4>LeetCode</h4>
+              <span>Knight (Top 5% globally)</span>
             </div>
-            <div className='row'>
-              {renderSkills(skillsData.slice(3, 6))}
+            <div className='achievement-card'>
+              <h4>CodeChef</h4>
+              <span>Global Rank 93 in Long One Challenge</span>
             </div>
-            <div className='row'>
-              {renderSkills(skillsData.slice(6, 9))}
+            <div className='achievement-card'>
+              <h4>GeeksforGeeks</h4>
+              <span>Global Rank 699 in Job-A-Thon 7</span>
             </div>
           </div>
         </div>
-        <div className='view-projects'>
-          <h1>View Projects</h1>
-          <p>Explore my portfolio of projects</p>
-          <Link to='/projects' className='view-projects-button'>
-            View Projects <MdArrowForward className='arrow-icon' />
-          </Link>
-        </div>
+
+        <Link to='/projects' className='bento-item bento-projects'>
+          <h3>Explore Projects <MdArrowForward className='arrow-icon' /></h3>
+          <p>View my full portfolio of work</p>
+        </Link>
+        
       </div>
     </div>
   );

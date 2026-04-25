@@ -3,7 +3,7 @@ import Proj2 from '../assests/proj2.jpg'
 import todo from '../assests/todo.png'
 import linkedinclone from '../assests/linkedinclone.png'
 import eventticketmarketplace from '../assests/eventticketmarketplace.png'
-import stockmarketanalysis from '../assests/stockmarketanalysis.png'
+import stockMarketAnalysisFullStack from '../assests/stockMarketAnalysisFullStack.png'
 import drumkit from '../assests/drumkit.png'
 import dicegame from '../assests/dicegame.png'
 import simongame from '../assests/simongame.png'
@@ -14,6 +14,12 @@ import dataExtraction from '../assests/dataExtraction.png'
 import moviecritic from '../assests/moviecritic.png'
 
 export const projectList = [
+    {
+        name: 'Stock Market Analysis Live Demo',
+        image: stockMarketAnalysisFullStack,
+        skills: 'React, TypeScript, FastAPI, PostgreSQL, NewsAPI, NSEPy, Recharts, Tailwind CSS',
+        link: <a href="https://stock-market-analysis-frontend.vercel.app/">https://stock-market-analysis-frontend.vercel.app/</a>
+    },
     {
         name: 'MovieCritic',
         image: moviecritic,
@@ -36,12 +42,6 @@ export const projectList = [
 
     },
     {
-        name: 'Stock Market Analysis using Python',
-        image: stockmarketanalysis,
-        skills: 'Python, Data Science, NumPy, Pandas, Matplotlib, NSEPy',
-        link: <a href="https://github.com/aaryan-verma/group-21-4A-project-Stock-Market-analysis-using-Python-">https://github.com/aaryan-verma/group-21-4A-project-Stock-Market-analysis-using-Python-</a>
-    },
-    {
         name: 'LinkedIn Clone',
         image: linkedinclone,
         skills: 'ReactJS, Redux HTML, CSS, JavaScript, Firebase, Vercel',
@@ -54,9 +54,9 @@ export const projectList = [
         link:<a href="https://github.com/aaryan-verma/data-extraction">https://github.com/aaryan-verma/data-extraction</a>,
     },
     {
-        name: 'Todo',
+        name: 'Todo App Live Demo',
         image: todo,
-        skills: 'Python, Flask, SQLAlchemy, Railway',
+        skills: 'Node.js, Express, MongoDB, React, JWT',
         link : <a href="https://todo-aaryan.up.railway.app/">https://todo-aaryan.up.railway.app/</a>,
     },
     {

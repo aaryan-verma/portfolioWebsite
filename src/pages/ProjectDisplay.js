@@ -25,7 +25,7 @@ function ProjectDisplay() {
         <div className="loader" style={{ opacity: 0.5 }}>
           <GridLoader 
             size={20}
-            color={"#123abc"}
+            color={"#cccccc"}
             loading={loading}/>
         </div>
       ) : (

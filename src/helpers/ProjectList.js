@@ -1,5 +1,3 @@
-import Proj1 from '../assests/proj1.jpg'
-import Proj2 from '../assests/proj2.jpg'
 import todo from '../assests/todo.png'
 import linkedinclone from '../assests/linkedinclone.png'
 import eventticketmarketplace from '../assests/eventticketmarketplace.png'
